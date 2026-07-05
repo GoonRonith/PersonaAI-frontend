@@ -1,16 +1,38 @@
-# React + Vite
+# Frontend Local Setup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Prerequisites
+- Node.js 18+ recommended
+- npm
 
-Currently, two official plugins are available:
+## Install dependencies
+```bash
+cd frontend
+npm install
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Environment variables
+Create a file named `.env.local` in the frontend folder with:
 
-## React Compiler
+```env
+VITE_API_BASE_URL=http://localhost:5000/api/v1
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+If your backend runs on a different port, update the URL accordingly.
 
-## Expanding the ESLint configuration
+## Run locally
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The app will start at:
+- http://localhost:5173
+
+## Build for production
+```bash
+npm run build
+```
+
+## Optional lint check
+```bash
+npm run lint
+```
